@@ -2,7 +2,9 @@
 
 def even_odd_generator():
     """呼び出された回数が奇数か偶数かを返すgenerator"""
-    i = 1  # 呼び出された回数を記憶
+    # 呼び出された回数を記憶
+    # => generatorは状態を持たせることもできる
+    i = 1
     while True:
         if i % 2:
             yield 'odd'
