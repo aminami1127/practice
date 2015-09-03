@@ -1,7 +1,7 @@
 # -*- coding:utf-8 -*-
 
 def infinite_generator(start):
-    """startからの数を2乗した数を無限に返すIterator"""
+    """startからの数を2乗した数を無限に返すgenerator"""
     while True:
         yield start ** 2
         start += 1
