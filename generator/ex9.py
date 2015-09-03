@@ -1,8 +1,10 @@
 # -*- coding:utf-8 -*-
 
 def send_value_generator():
-    i = (yield)
+    """generatorの呼び出し時に値を送るサンプル"""
+    i = (yield)  # i = 1が代入される
     while True:
+        # sendされた値がiに設定された後、i ** 2がyieldされる
         i = (yield i ** 2)
 
 

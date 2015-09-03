@@ -1,6 +1,7 @@
 # -*- coding:utf-8 -*-
 
 class EvenOddIterator(object):
+    """呼び出された回数が奇数か偶数かを返すIterator"""
     def __init__(self):
         self.i = 0
 
@@ -15,6 +16,7 @@ class EvenOddIterator(object):
                 return 'odd'
             else:
                 return 'even'
+            # generatorと違いreturnの後に処理を書けない
 
 sample = EvenOddIterator()
 for i, x in enumerate(sample):
