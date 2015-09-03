@@ -20,5 +20,6 @@ class SampleIterator(object):
 sample = SampleIterator(1, 10)
 print([x for x in sample])
 print([x for x in sample])  # もうsampleは要素を返さない
-sample = SampleIterator(2, 20)
+sample = list(SampleIterator(2, 20))  # listにすると要素を全てメモリに格納するため何度も呼び出せる
+print([x for x in sample])
 print([x for x in sample])
