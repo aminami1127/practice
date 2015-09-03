@@ -30,6 +30,6 @@ import sys
 # >> 9223372036854775807
 sample = SampleIterator(1, sys.maxint)  # generatorは要素を全てメモリに格納しないためメモリを節約できる
 for i in sample:
-    print(i)  # １つずつ計算し結果を返す
+    print(i)  # １つずつ計算し結果を返す(遅延評価)
     if i > 1000:
         break
