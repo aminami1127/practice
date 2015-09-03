@@ -20,6 +20,16 @@ class SampleIterator(object):
 sample = SampleIterator(1, 10)
 print([x for x in sample])
 print([x for x in sample])  # もうsampleは要素を返さない
+
 sample = list(SampleIterator(2, 20))  # listにすると要素を全てメモリに格納するため何度も呼び出せる
 print([x for x in sample])
 print([x for x in sample])
+
+import sys
+# sys.maxint
+# >> 9223372036854775807
+sample = SampleIterator(1, sys.maxint)  # generatorは要素を全てメモリに格納しないためメモリを節約できる
+for i in sample:
+    print(i)  # １つずつ計算し結果を返す
+    if i > 1000:
+        break
